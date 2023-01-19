@@ -11,11 +11,13 @@ const server = http.createServer((req, res) => {
     if (req.method === 'GET') {
         if (req.url === '/categories') {
             categories.forEach(category => {
+                let addSub = []
                 subCategories.forEach(subcategory => {
-                    if (categories.category_id == subcategory.category_id) {
-                        category.push(subcategory);
+                    if (category.category_id == subcategory.category_id) {
+                        addSub.push(subcategory);
                     }
                 })
+                category.subCategories = addSub;
             })
             res.writeHead(200, options);
             res.end(JSON.stringify(categories));
