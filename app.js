@@ -45,12 +45,27 @@ const server = http.createServer((req, res) => {
         };
 
         if (req.url === '/products') {
-            return res.end(JSON.stringify(products));
+            return res.end(JSON.stringify([]));
         }
-
         if (req.url === `/products/${id}`) {
             return res.end(JSON.stringify(products.find(p => p.productId == id)));
-        }
+        };
+
+        if (req.url === url.parse(req.url).href) {
+            let div = url.parse(req.url).query.split('&');
+            let search = [];
+            div.forEach(s => search.push(s.split('=')));
+            if (search.length == 2) {
+                products.forEach(p => {
+                    if (p[`${search[0][0]}`] == search[0][1] && p[`${search[1][0]}`] == search[1][1]) {
+                        console.log(p);
+                    }
+                })
+            }
+            else if(search.length == 1) {
+                
+            }
+        };
     };
 });
 
