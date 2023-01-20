@@ -1,26 +1,26 @@
 [{
         "subCategoryId": 1,
         "categoryId": 1,
-        "sub_category_name": "smart phones"
+        "subCategoryName": "smart phones"
     },
     {
         "subCategoryId": 2,
         "categoryId": 1,
-        "sub_category_name": "televisions"
+        "subCategoryName": "televisions"
     },
     {
         "subCategoryId": 3,
         "categoryId": 1,
-        "sub_category_name": "laptops"
+        "subCategoryName": "laptops"
     },
     {
         "subCategoryId": 4,
         "categoryId": 2,
-        "sub_category_name": "boots"
+        "subCategoryName": "boots"
     },
     {
         "subCategoryId": 5,
         "categoryId": 2,
-        "sub_category_name": "shirts"
+        "subCategoryName": "shirts"
     }
 ]
