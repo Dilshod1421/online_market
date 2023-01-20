@@ -105,31 +105,39 @@
 
 
     POST
+
     / categories
-categoryName
-
-POST
+    {
+        "categoryName": "weapons"  
+    }
+    
     / subcategories
-categoryId, subCategoryName
+    {
+        "categoryId": 3,
+        "subCategoryName": "pistols"
+    }
 
-POST
     / products
-subCategoryId, productName, price, color, model
+    {
+    "subCategoryId": 3,
+    "model": "Glock",
+    "productName": "G17",
+    "color": "black",
+    "price": "1200"
+  }
 
 
-PUT
-    / categories / id
-categoryName
 
-PUT
-    / subcategories / id
-categoryId, subCategoryName
+    PUT
 
-PUT
-    / products / id
-subCategoryId, productName, price, color, model
+/ categories / id
+    categoryName
 
+/ subcategories / id
+    categoryId, subCategoryName
 
+/ products / id
+    subCategoryId, productName, price, color, model
 
 
 

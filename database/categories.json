@@ -5,5 +5,9 @@
   {
     "categoryId": 2,
     "categoryName": "clothes"
+  },
+  {
+    "categoryId": 3,
+    "categoryName": "weapons"
   }
 ]
