@@ -18,6 +18,7 @@ const server = http.createServer((req, res) => {
                 let addSub = []
                 subcategories.forEach(s => {
                     if (c.categoryId == s.categoryId) {
+                        delete s.categoryId
                         addSub.push(s);
                     }
                 })
